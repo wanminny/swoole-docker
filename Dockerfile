@@ -5,6 +5,7 @@ RUN mkdir -p ${WORK_HOME}
 RUN apt-get update && apt-get install -y \
 	wget \
 	zip \
+	php \
 	bzip2 \
 	libssl-dev
 RUN cd ${WORK_HOME} \

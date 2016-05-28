@@ -4,7 +4,6 @@ ENV WORK_HOME /home/swoole
 RUN mkdir -p ${WORK_HOME}
 RUN apt-get update && apt-get install -y \
 	wget \
-	php* \
 	zip \
 	bzip2 \
 	libssl-dev

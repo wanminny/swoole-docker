@@ -5,7 +5,6 @@ RUN mkdir -p ${WORK_HOME}
 RUN apt-get update && apt-get install -y \
 	wget \
 	zip \
-	php \
 	bzip2 \
 	libssl-dev
 RUN cd ${WORK_HOME} \
@@ -29,7 +28,7 @@ RUN cd ${WORK_HOME} \
 	&& tar zxvf swoole-1.8.4.tgz \
 	&& cd swoole-1.8.4 \
 	&& phpize \
-	&& ./configure --enable-async-redis  --enable-async-mysql --enable-async-httpclient --enable-openssl --enable-jemalloc \
+	&& ./configure --enable-async-redis  --enable-async-httpclient --enable-openssl --enable-jemalloc \
 	&& make \
 	&& make install
 
